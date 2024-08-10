@@ -1,0 +1,5 @@
+- name: starting the grafana service
+  service: 
+    name: grafana-server
+    state: restarted
+  listen: event_restart_grafana

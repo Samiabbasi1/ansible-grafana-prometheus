@@ -1,0 +1,27 @@
+- hosts: alert-manager
+  become: yes
+  become_user: root
+  become_method: sudo
+  roles:
+  - alert-manager
+
+- hosts: p-node-exporter
+  become: yes
+  become_user: root
+  become_method: sudo
+  roles:
+  - p-node-exporter
+
+- hosts: prometheus
+  become: yes
+  become_user: root
+  become_method: sudo
+  roles:
+  - prometheus
+
+- hosts: grafana
+  become: yes
+  become_user: root
+  become_method: sudo
+  roles:
+  - grafanac
